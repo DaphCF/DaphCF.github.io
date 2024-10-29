@@ -1,0 +1,43 @@
+<h3>POST /task</h3>
+<h4>Request samples</h4>
+<div class="buttons">
+    <button class="code-button">Node.js</button>
+</div>
+<div id="request" class="request-sample">
+    <pre id="requestCode" class="language-javascript">
+const axios = require('axios');
+
+async function createTask() {
+    try {
+    const response = await axios.post('http://localhost:3000/tasks/post', {
+        title: 'Nueva Tarea',
+        description: 'Descripción de la nueva tarea',
+        completed: false
+    });
+    console.log('Tarea creada:', response.data);
+    } catch (error) {
+    console.error('Error al crear la tarea:', error.message);
+    }
+}
+
+createTask();  
+</pre>
+</div>
+<h4>Response samples</h4>
+<div class="buttons">
+    <button class="code-button code-201" onclick="showResponse(201, this, 'post')">201</button>
+</div>
+<!-- <div id="response200" class="response-sample" style="display: none;">
+    <p><strong>Content type:</strong> application/json</p>
+    <pre id="responseCode">
+        {<br>"message": "Un objeto Task con la misma información ya existía."<br>}
+    </pre>
+</div> -->
+<div id="responseSample" class="response-sample">
+    <p><strong>Content type:</strong> application/json</p>
+    <pre id="responseCode" class="language-json">
+{
+    "message": "Sample response message"
+}
+</pre>
+</div>

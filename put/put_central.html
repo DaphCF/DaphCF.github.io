@@ -1,0 +1,60 @@
+<h1>Editar Tarea</h1>
+<p>Actualiza la información de una tarea existente, permitiendo modificar título, descripción y estado.</p>
+<h3>Authorizations:</h3><p>No requiere autorización.</p>
+<h3>Path parameters:</h3>
+<ul><li><strong>id</strong> (en la URL): ID de la tarea.</li></ul>
+<h3>Request Body schema: <span class="required">required</span></h3>
+<div>
+    <ul>
+        <li><strong>tittle</strong> (required): string</li>
+        <p>Titulo de la tarea.</p>
+        <li><strong>description</strong> (required): string</li>
+        <p>Descripción de la tarea.</p>
+        <li><strong>completed</strong> (required): boolean</li>
+        <p>Estado de finalización de la tarea.</p>
+    </ul>
+</div>
+<h3>Responses</h3>
+<div class="responses">
+    <div class="response success" onclick="toggleSchema('schema200')">
+        <h4>200</h4>
+        <p>Objeto <span class="highlight">Task</span> editado correctamente</p>
+    </div>
+    <div id="schema200" class="schema" style="display: none;">
+        <h4>RESPONSE SCHEMA: <span>application/json</span></h4>
+        <ul>
+            <li><strong>code</strong> (required): integer</li>
+            <p>Código de respuesta HTTP (200 si se actualiza correctamente).</p>
+            <li><strong>message</strong> (required): string</li>
+            <p>Mensaje de confirmación..</p>
+            <li><strong>task</strong> (required): object<p>Datos de la tarea actualizada.</p>
+                <ul>
+                    <li><strong>id</strong> (required): string</li>
+                    <p>Identificador único de la tarea.</p>
+                    <li><strong>tittle</strong> (required): string</li>
+                    <p>Título actualizado de la tarea.</p>
+                    <li><strong>description</strong> (required): string</li>
+                    <p>Descripción actualizada de la tarea.</p>
+                    <li><strong>completed</strong> (required): boolean</li>
+                    <p>Estado de finalización de la tarea.</p>
+                </ul>
+            </li>
+            
+            
+        </ul>
+    </div>
+
+    <div class="response error" onclick="toggleSchema('schema404')">
+        <h4>404</h4>
+        <p>Error en la petición</p>
+    </div>
+    <div id="schema404" class="schema" style="display: none;">
+        <h4>RESPONSE SCHEMA: <span>application/json</span></h4>
+        <ul>
+            <li><strong>code</strong> (required): integer</li>
+            <p>Código de error HTTP (404 en caso de error).</p>
+            <li><strong>message</strong> (required): string</li>
+            <p>Mensaje descriptivo del error.</p>
+        </ul>
+    </div>
+</div>

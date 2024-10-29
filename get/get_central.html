@@ -1,0 +1,40 @@
+<h2>Listar Tareas</h2>
+<p>Devuelve una lista de todas las tareas almacenadas en la base de datos.</p>
+<h3>Authorizations:</h3><p>No requiere autorización.</p>
+<h3>Request Body schema:</h3><p>No requiere una entrada.</p>
+<h3>Responses</h3>
+<div class="responses">
+    <div class="response success" onclick="toggleSchema('schema200')">
+        <h4>200</h4>
+        <p>Lista de objetos <span class="highlight">Task</span> en el sistema.</p>
+    </div>
+    <div id="schema200" class="schema" style="display: none;">
+        <h4>RESPONSE SCHEMA: <span>application/json []: array</span></h4>
+        <ul>
+            <li><strong>id</strong> (required): string</li>
+            <p>Identificador único de la tarea.</p>
+            <li><strong>tittle</strong> (required): string</li>
+            <p>Titulo de la tarea.</p>
+            <li><strong>description</strong> (required): string</li>
+            <p>Descripción de la tarea.</p>
+            <li><strong>completed</strong> (required): boolean</li>
+            <p>Estado de finalización de la tarea.</p>
+            <li><strong>createdAt</strong> (required): string (ISO 8601 date)</li>
+            <p>Fecha y hora de creación de la tarea en formato ISO.</p>
+        </ul>
+    </div>
+
+    <div class="response error" onclick="toggleSchema('schema404')">
+        <h4>404</h4>
+        <p>Error en parámetros de la petición</p>
+    </div>
+    <div id="schema404" class="schema" style="display: none;">
+        <h4>RESPONSE SCHEMA: <span>application/json</span></h4>
+        <ul>
+            <li><strong>code</strong> (required): integer</li>
+            <p>Código de error HTTP (404 en caso de error).</p>
+            <li><strong>message</strong> (required): string</li>
+            <p>Mensaje descriptivo del error.</p>
+        </ul>
+    </div>
+</div>

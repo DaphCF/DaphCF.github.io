@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Documentación</h1>
+    </header>
+
+    <main>
+        <div class="Madre">
+            <aside>
+                <div class="izquierda">
+                    <a href="#" id="tareas" class="tareas">Tareas</a>
+                    <div id="submenuTareas" class="tareas-listado">
+                        <a href="#" id="tutorial" class="tarea-item">Tutorial</a><br>
+                        <a href="#" id="crear-tarea" class="tarea-item">Crear tareas (POST)</a><br>
+                        <a href="#" id="listar-tareas" class="tarea-item">Listar tareas (GET)</a><br>
+                        <a href="#" id="obtener-tarea" class="tarea-item">Obtener tareas por ID (GET)</a><br>
+                        <a href="#" id="editar-tarea" class="tarea-item">Editar tareas (PUT)</a><br>
+                        <a href="#" id="eliminar-tarea" class="tarea-item">Eliminar tareas (DELETE)</a>
+                    </div>
+                    <a href="#" id="modelo" class="tareas">Modelo</a>
+                    <div id="submenuModelo" class="modelo-listado">
+                        <a href="#" id="objeto_task" class="tarea-item">Objeto Task</a><br>
+                    </div>
+                    <div class="Creditos">
+                        <p><strong>Equipo:</strong></p>
+                        <p>Nancy Anahi Estrella Rodríguez</p>
+                        <p>Karla Yazmin Olivares Berdusco</p>
+                        <p>Edgar Joel Villela Castañeda</p>
+                        <P>Daphne Airam Corona Flores</P>
+                    </div>
+                </div>
+            </aside>
+            <div class="centro">
+                <section>
+                    <h2>Proyecto Tasks</h2>
+                    <p>
+                        El proyecto de Tareas es una API diseñada para permitir la administración de tareas, con
+                        operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre una base de datos en Firestore. El
+                        proyecto utiliza tecnologías como Firebase y un modelo de tareas en JavaScript que aprovecha el
+                        sistema de colección de Firestore para el almacenamiento y recuperación de datos. Las tareas son
+                        identificadas de forma única con un UUID, lo cual facilita su manipulación y trazabilidad.
+                    </p>
+
+                    <h3>Funcionalidades de la API</h3>
+                    <p>Esta API incluye cinco endpoints principales:</p>
+
+                    <ul>
+                        <li>Crear Tarea (POST): Permite agregar una nueva tarea a la base de datos.</li>
+                        <li>Listar Tareas (GET): Devuelve todas las tareas registradas en la base de datos.</li>
+                        <li>Obtener Tarea por ID (GET): Recupera la información de una tarea específica mediante su ID.</li>
+                        <li>Editar Tarea (PUT): Actualiza la información de una tarea existente.</li>
+                        <li>Eliminar Tarea (DELETE): Elimina una tarea de la base de datos de forma permanente.</li>
+                    </ul>
+                    <p>
+                        A lo largo de esta documentación, se proporciona una descripción detallada de cada endpoint, los
+                        parámetros de entrada y salida, así como ejemplos de uso.
+                    </p>
+                </section>
+            </div>
+            <div class="derecha">
+                <div class="Doc">
+
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <p>© 2024 Chilaquiles Rojos. Todos los derechos reservados.</p>
+    </footer>
+</body>
+<script src="javascript.js"></script>
+
+</html>

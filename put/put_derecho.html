@@ -1,0 +1,38 @@
+<h3>PUT /task/:id</h3>
+<h4>Request samples</h4>
+<div class="buttons">
+    <button class="code-button">Node.js</button>
+</div>
+<div id="request" class="request-sample">
+    <pre id="requestCode" class="language-javascript">
+const axios = require('axios');
+
+async function updateTask(id) {
+    try {
+    const response = await axios.put(`http://localhost:3000/tasks/update/${id}`, {
+        title: 'Tarea actualizada',
+        description: 'Descripción de la tarea actualizada',
+        completed: true
+    });
+    console.log('Tarea actualizada:', response.data);
+    } catch (error) {
+    console.error('Error al actualizar la tarea:', error.message);
+    }
+}
+
+updateTask('abc123');        
+</pre>
+</div>
+<h4>Response samples</h4>
+<div class="buttons">
+    <button class="code-button code-200" onclick="showResponse(200, this, 'put')">200</button>
+    <button class="code-button code-404" onclick="showResponse(404, this, 'put')">404</button>
+</div>
+<div id="responseSample" class="response-sample">
+    <p><strong>Content type:</strong> application/json</p>
+    <pre id="responseCode" class="language-json">
+{
+    "message": "Sample response message"
+}
+</pre>
+</div>

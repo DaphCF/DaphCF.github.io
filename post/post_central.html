@@ -1,0 +1,35 @@
+<h1>Crear Tarea</h1>
+<p>Permite agregar una nueva tarea con título, descripción y estado de finalización.</p>
+<h3>Authorizations:</h3><p>No requiere autorización.</p>
+<h3>Request Body schema: <span class="required">required</span></h3>
+<div>
+    <ul>
+        <li><strong>tittle</strong> (required): string</li>
+        <p>Titulo de la tarea.</p>
+        <li><strong>description</strong> (required): string</li>
+        <p>Descripción de la tarea.</p>
+        <li><strong>completed</strong> (required): boolean</li>
+        <p>Estado de finalización de la tarea.</p>
+    </ul>
+</div>
+<h3>Responses</h3>
+<div class="responses">
+    <div class="response success" onclick="toggleSchema('schema201')">
+        <h4>201</h4>
+        <p>Un objeto <span class="highlight">Task</span> creado.</p>
+    </div>
+    <div id="schema201" class="schema" style="display: none;">
+        <h4>RESPONSE SCHEMA: <span>application/json</span></h4>
+        <ul>
+            <li><strong>id</strong> (required): string</li>
+            <p>Identificador único de la tarea creada.</p>
+            <li><strong>tittle</strong> (required): string</li>
+            <p>Titulo de la tarea.</p>
+            <li><strong>description</strong> (required): string</li>
+            <p>Descripción de la tarea.</p>
+            <li><strong>completed</strong> (required): boolean</li>
+            <p>Estado de finalización de la tarea.</p>
+            <li><strong>createdAt</strong> (required): string (ISO 8601 date)</li>
+            <p>Fecha y hora de creación de la tarea en formato ISO.</p>
+        </ul>
+    </div>
